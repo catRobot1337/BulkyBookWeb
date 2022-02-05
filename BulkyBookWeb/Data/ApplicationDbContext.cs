@@ -5,7 +5,7 @@ namespace BulkyBookWeb.Data;
 
 public class ApplicationDbContext : DbContext
 {
-    //constructor ... add parameters 
+    //constructor ... add parameters below
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
     {
 

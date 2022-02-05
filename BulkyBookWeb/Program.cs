@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
-
+//builder.Services.AddRazorPages().AddRazorRuntimeCompilation(); no longer needed with .NET 6
 
 var app = builder.Build();
 
