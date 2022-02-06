@@ -39,6 +39,7 @@ public class CategoryController : Controller
         {
             _db.Categories.Add(obj);
             _db.SaveChanges();
+            TempData["success"] = "Category created successfully";
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -77,6 +78,7 @@ public class CategoryController : Controller
         {
             _db.Categories.Update(obj);
             _db.SaveChanges();
+            TempData["success"] = "Category edited successfully";
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -102,7 +104,7 @@ public class CategoryController : Controller
     }
 
     //POST DELETE
-    [HttpPost]
+    [HttpPost,ActionName("Delete")]
     [ValidateAntiForgeryToken]
     public IActionResult DeletePOST(int? id)
     {
@@ -113,7 +115,8 @@ public class CategoryController : Controller
         }
             _db.Categories.Remove(obj);
             _db.SaveChanges();
-            return RedirectToAction("Index");
+        TempData["success"] = "Category deleted successfully";
+        return RedirectToAction("Index");
     }
 
 
