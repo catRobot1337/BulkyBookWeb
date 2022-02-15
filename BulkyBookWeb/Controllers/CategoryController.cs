@@ -1,5 +1,5 @@
-﻿using BulkyBookWeb.Data; //added so that private readonly ApplicationDbContext _db; could be used
-using BulkyBookWeb.Models;
+﻿using BulkyBook.DataAccess; //added so that private readonly ApplicationDbContext _db; could be used
+using BulkyBook.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyBookWeb.Controllers;
